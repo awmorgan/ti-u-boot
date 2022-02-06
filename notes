@@ -1,0 +1,30 @@
+toolchain installed at: /usr/local/bin/aarch64-unknown-linux-gnu-gcc
+toolchain version:
+    /Volumes/git/ti-u-boot (qemu-debugging)*$ aarch64-unknown-linux-gnu-gcc --version
+    aarch64-unknown-linux-gnu-gcc (GCC) 10.3.0
+
+gdb version:
+    ~/git/ti-u-boot (ti-u-boot-2021.01)*$ gdb --version
+    GNU gdb (GDB) 11.2
+
+qemu version:
+    /Volumes/git/ti-u-boot (qemu-debugging)*$ qemu-system-aarch64 --version
+    QEMU emulator version 6.2.0
+
+build defconfig:
+    make  j721e_evm_a72_defconfig  -j8
+
+build:
+    make CROSS_COMPILE=aarch64-unknown-linux-gnu-  -j8
+
+launch qemu:
+    qemu-system-aarch64 -m 2G -s -S -machine virt -cpu cortex-a72 -kernel u-boot
+
+launch gdb:
+    ~/git/ti-u-boot (qemu-debugging)*$ gdb u-boot -ex "target remote localhost:1234" -ex "source bp" -ex "layout src"
+
+decompile device tree:
+    /Volumes/git/ti-u-boot (qemu-debugging)*$ dtc -I dtb -O dts dts/dt.dtb -o dt.dts
+
+config defines (after build):
+    include/generated/autoconf.h

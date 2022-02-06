@@ -2,6 +2,7 @@
 #
 # (C) Copyright 2004-2006
 # Wolfgang Denk, DENX Software Engineering, wd@denx.de.
+ccflags-y = -O0 -g3 -fno-inline -DDEBUG
 
 # core
 ifndef CONFIG_SPL_BUILD

@@ -3,6 +3,7 @@
 # Copyright (c) 2015 Google, Inc
 # Wolfgang Denk, DENX Software Engineering, wd@denx.de.
 #
+ccflags-y = -O0 -g3 -fno-inline -DDEBUG
 
 obj-$(CONFIG_$(SPL_TPL_)CLK) += clk-uclass.o
 obj-$(CONFIG_$(SPL_TPL_)CLK) += clk_fixed_rate.o

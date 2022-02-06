@@ -1,8 +1,9 @@
 # SPDX-License-Identifier: GPL-2.0+
 #
 # Copyright (c) 2013 Google, Inc
+ccflags-y = -O0 -g3 -fno-inline -DDEBUG
 
-obj-y	+= device.o fdtaddr.o lists.o root.o uclass.o util.o
+obj-y	+= device.o fdtaddr.o lists.o root.o uclass.o util.o of_access.o of_addr.o
 obj-$(CONFIG_$(SPL_TPL_)ACPIGEN) += acpi.o
 obj-$(CONFIG_DEVRES) += devres.o
 obj-$(CONFIG_$(SPL_)DM_DEVICE_REMOVE)	+= device-remove.o

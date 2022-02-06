@@ -218,12 +218,12 @@ struct global_data {
 	 * @fdt_size: space reserved for relocated device space
 	 */
 	unsigned long fdt_size;
-#if CONFIG_IS_ENABLED(OF_LIVE)
+// #if CONFIG_IS_ENABLED(OF_LIVE)
 	/**
 	 * @of_root: root node of the live tree
 	 */
 	struct device_node *of_root;
-#endif
+// #endif
 
 #if CONFIG_IS_ENABLED(MULTI_DTB_FIT)
 	/**

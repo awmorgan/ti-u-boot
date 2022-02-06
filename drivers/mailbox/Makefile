@@ -2,6 +2,7 @@
 #
 # Copyright (c) 2016, NVIDIA CORPORATION.
 #
+ccflags-y = -O0 -g3 -fno-inline -DDEBUG
 
 obj-$(CONFIG_$(SPL_)DM_MAILBOX) += mailbox-uclass.o
 obj-$(CONFIG_SANDBOX_MBOX) += sandbox-mbox.o

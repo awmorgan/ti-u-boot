@@ -1,3 +1,4 @@
+ccflags-y = -O0 -g3 -fno-inline -DDEBUG
 obj-$(CONFIG_FIRMWARE)		+= firmware-uclass.o
 obj-$(CONFIG_$(SPL_)ARM_PSCI_FW)	+= psci.o
 obj-$(CONFIG_TI_SCI_PROTOCOL)	+= ti_sci.o

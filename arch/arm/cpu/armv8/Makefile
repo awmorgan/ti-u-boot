@@ -2,6 +2,7 @@
 #
 # (C) Copyright 2000-2003
 # Wolfgang Denk, DENX Software Engineering, wd@denx.de.
+ccflags-y = -O0 -g3 -fno-inline -DDEBUG
 
 extra-y	:= start.o
 

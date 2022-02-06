@@ -1,0 +1,8 @@
+break serial_find_console_or_panic
+break /Volumes/git/ti-u-boot/drivers/serial/serial-uclass.c:133
+break device_ofdata_to_platdata
+break /Volumes/git/ti-u-boot/drivers/serial/serial_omap.c:104
+break /Volumes/git/ti-u-boot/drivers/serial/serial_omap.c:119
+break /Volumes/git/ti-u-boot/drivers/core/device.c:521
+break /Volumes/git/ti-u-boot/drivers/core/device.c:526
+break /Volumes/git/ti-u-boot/drivers/core/device.c:507
